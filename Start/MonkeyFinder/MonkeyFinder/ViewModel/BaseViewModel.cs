@@ -7,6 +7,12 @@ namespace MonkeyFinder.ViewModel
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+        public IDataService DataService { get; }
+        public BaseViewModel()
+        {
+            DataService = DependencyService.Get<IDataService>();
+        }
+
         bool isBusy;
         public bool IsBusy
         {

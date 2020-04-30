@@ -8,8 +8,16 @@ using Xamarin.Forms;
 [assembly:Dependency(typeof(WebDataService))]
 namespace MonkeyFinder.Services
 {
-    public class WebDataService
+    public class WebDataService : IDataService
     {
-       
+        public async Task<IEnumerable<Monkey>> GetMonkeysASync()
+        {
+            var json = await Client.GetStringAsync("https://montemagno.com/monkeys.json");
+            var all = Monkey.FromJson(json);
+            return all;
+        }
+
+        HttpClient httpClient;
+        HttpClient Client => httpClient ?? (httpClient = new HttpClient());
     }
 }
