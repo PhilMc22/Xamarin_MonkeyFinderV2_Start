@@ -6,5 +6,19 @@
              xmlns:circle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              x:Class="MonkeyFinder.View.MainPage">
 
+    <ContentPage.BindingContext>
+        <viewmodel:MonkeysViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid RowSpacing="0" ColumnSpacing="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+    </Grid>
 
 </ContentPage>
