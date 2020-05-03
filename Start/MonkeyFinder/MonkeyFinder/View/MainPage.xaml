@@ -54,6 +54,12 @@
                 Grid.Row="1"
                 Grid.Column="0"/>
 
+        <Button Text="Find Closest"
+                Command="{Binding GetClosestCommand}"
+                IsEnabled="{Binding IsNotBusy}"
+                Grid.Row="1"
+                Grid.Column="1"/>
+
         <ActivityIndicator IsVisible="{Binding IsBusy}"
                            IsRunning="{Binding IsBusy}"
                            HorizontalOptions="FillAndExpand"
