@@ -4,7 +4,9 @@
              xmlns:local="clr-namespace:MonkeyFinder"
              xmlns:viewmodel="clr-namespace:MonkeyFinder.ViewModel"
              xmlns:circle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
-             x:Class="MonkeyFinder.View.MainPage">
+             x:Class="MonkeyFinder.View.MainPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="True">
 
     <ContentPage.BindingContext>
         <viewmodel:MonkeysViewModel/>

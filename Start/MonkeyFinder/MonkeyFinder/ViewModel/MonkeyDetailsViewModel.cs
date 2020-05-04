@@ -37,7 +37,7 @@ namespace MonkeyFinder.ViewModel
         {
             try
             {
-                await Maps.OpenAsync(Monkey.Latitude, Monkey.Longitude);
+                await Map.OpenAsync(Monkey.Latitude, Monkey.Longitude);
             }
             catch(Exception ex)
             {
