@@ -12,7 +12,8 @@ namespace MonkeyFinder.Services
     {
         public async Task<IEnumerable<Monkey>> GetMonkeysASync()
         {
-            var json = await Client.GetStringAsync("https://montemagno.com/monkeys.json");
+            //var json = await Client.GetStringAsync("https://montemagno.com/monkeys.json");
+            var json = await Client.GetStringAsync("https://xamfunctionsmonkeyspm.azurewebsites.net/api/GetAllMonkeys");
             var all = Monkey.FromJson(json);
             return all;
         }
